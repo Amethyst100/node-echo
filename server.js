@@ -77,6 +77,10 @@ app.get('/hello/:name', function (req, res) {
   res.send('Hello! ' + req.params.name);
 });
 
+app.get('/process', function (req, res) {
+  res.send(process.env);
+});
+
 // error handling
 app.use(function(err, req, res, next){
   console.error(err.stack);
