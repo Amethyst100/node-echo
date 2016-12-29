@@ -73,8 +73,8 @@ app.get('/pagecount', function (req, res) {
   }
 });
 
-app.get('/info', function (req, res) {
-  res.send('Hello! Test Info');
+app.get('/hello/:name', function (req, res) {
+  res.send('Hello! ' + req.params.name);
 });
 
 // error handling
