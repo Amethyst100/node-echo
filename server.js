@@ -73,6 +73,10 @@ app.get('/pagecount', function (req, res) {
   }
 });
 
+app.get('/info', function (req, res) {
+  res.send('Hello! Test Info');
+});
+
 // error handling
 app.use(function(err, req, res, next){
   console.error(err.stack);
